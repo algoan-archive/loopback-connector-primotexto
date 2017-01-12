@@ -66,7 +66,7 @@ Primotexto.send(options)
     "type": "notification",
     "receiver": "RECEIVER_PHONE_NUMBER",
     "message": "TEXT_MESSAGE",
-    "sender": "TARGET_PHONE_NUMBER",
+    "sender": "YOUR_PHONE_NUMBER",
     "campaignName": "CAMPAIN_NAME",
     "category": "CATEGORY"
 }
@@ -79,7 +79,7 @@ Primotexto.send(options)
     "type": "marketing",
     "receiver": "RECEIVER_PHONE_NUMBER",
     "message": "TEXT_MESSAGE",
-    "sender": "TARGET_PHONE_NUMBER",
+    "sender": "YOUR_PHONE_NUMBER",
     "campaignName": "CAMPAIN_NAME",
     "category": "CATEGORY"
 }
