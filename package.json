@@ -1,0 +1,52 @@
+{
+  "name": "loopback-connector-primotexto",
+  "version": "0.1.0",
+  "description": "LoopBack connector for Primotexto",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "./node_modules/.bin/check-dependencies && ./node_modules/.bin/eslint .",
+    "cover": "./node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -R spec test/",
+    "test": "./node_modules/.bin/mocha -R spec test/"
+  },
+  "author": "Yelloan - Fabrice Ongenae",
+  "homepage": "https://github.com/yelloan/loopback-connector-primotexto",
+  "license": "MIT",
+  "keywords": [
+    "web",
+    "restful",
+    "rest",
+    "api",
+    "express",
+    "loopback",
+    "primotexto",
+    "StrongLoop",
+    "framework",
+    "sms",
+    "connector"
+  ],
+  "bugs": {
+    "url": "https://github.com/yelloan/loopback-connector-primotexto/issues"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  },
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "check-dependencies": "^1.0.1",
+    "eslint": "^3.13.1",
+    "express": "^4.14.0",
+    "lodash": "^4.17.4",
+    "loopback": "^3.2.0",
+    "mocha": "^3.2.0",
+    "should": "^11.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yelloan/loopback-connector-primotexto"
+  }
+}

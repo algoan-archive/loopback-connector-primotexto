@@ -1,0 +1,32 @@
+{
+   "env": {
+       "es6": true,
+       "node": true
+   },
+   "extends": "eslint:recommended",
+   "rules": {
+       "indent": [ "error",  2, {"SwitchCase": 1} ],
+       "linebreak-style": [ "error", "unix" ],
+       "quotes": [ "error",  "single"],
+       "semi": [ "error",  "never" ],
+       "eqeqeq": [ "error",  "allow-null" ],
+       "no-eval": [ "error" ],
+       "no-implicit-globals": [ "error" ],
+       "no-invalid-this": [ "error" ],
+       "no-implied-eval": [ "error" ],
+       "no-sequences": [ "error" ],
+       "no-useless-call": [ "error" ],
+       "no-useless-concat": [ "error" ],
+       "strict": [ "error", "global" ],
+       "no-shadow": [ "error" ],
+       "no-undef": [ "error" ],
+       "no-shadow-restricted-names": [ "error" ],
+       "global-require": [ "error" ],
+       "handle-callback-err": [ "error", "^(err|error)$" ],
+       "camelcase": [ "error", {"properties": "always"} ],
+       "no-var": [ "error" ],
+       "no-const-assign": [ "error" ],
+       "prefer-const": [ "error" ],
+       "no-unused-vars": [ "error", {"args": "none"} ]
+   }
+}
