@@ -111,6 +111,7 @@ $ node ./example/example.js
 - Add to [npmjs.com](https://www.npmjs.com/)
 - Plug with [travis-ci](https://travis-ci.org/)
 - Plug with [coveralls.io](https://coveralls.io/)
+- Wrap the returned [error codes](https://www.primotexto.com/api/plus/code_erreurs.asp) in [callback](https://github.com/yelloan/loopback-connector-primotexto/blob/master/lib/primotexto.js#L87)
 - Improve verification of the input data in [the Primotexto._internals.formatData](https://github.com/yelloan/loopback-connector-primotexto/blob/master/lib/primotexto.js#L29)
 - Add functions to validate phone numbers with [libphonenumber](https://github.com/googlei18n/libphonenumber)
 

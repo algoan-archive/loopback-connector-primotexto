@@ -20,7 +20,6 @@ describe('Primotexto', function () {
 
   before(function () {
     fakeServer = utils.createFakeServerFn(port)
-    Primotexto = utils.setupPrimotextoConnector(apiUrl, apiKey)
     return Promise.resolve()
   })
 
@@ -33,6 +32,16 @@ describe('Primotexto', function () {
     beforeEach(function () {
       fakeServer.onSendMarketingSms = null
       fakeServer.onSendNotificationSms = null
+    })
+
+    before(function () {
+      Primotexto = utils.setupPrimotextoConnector(apiUrl, apiKey)
+      return Promise.resolve()
+    })
+
+    after(function () {
+      Primotexto = null
+      return Promise.resolve()
     })
 
     it('should send the sms with full options', function (done) {
@@ -165,6 +174,16 @@ describe('Primotexto', function () {
       fakeServer.onSendNotificationSms = null
     })
 
+    before(function () {
+      Primotexto = utils.setupPrimotextoConnector(apiUrl, apiKey)
+      return Promise.resolve()
+    })
+
+    after(function () {
+      Primotexto = null
+      return Promise.resolve()
+    })
+
     it('should send the sms with full options', function (done) {
       let doneCount = 0
       const doneCb = function () {
@@ -287,6 +306,47 @@ describe('Primotexto', function () {
           err.name.should.be.eql('AssertionError')
           err.message.should.be.eql('Content of the sms ("message") is required (current: "undefined").')
           return Promise.resolve()
+        })
+    })
+  })
+
+  describe('Send notification sms with a wrong API key', function () {
+    beforeEach(function () {
+      fakeServer.onSendMarketingSms = null
+      fakeServer.onSendNotificationSms = null
+    })
+
+    before(function () {
+      Primotexto = utils.setupPrimotextoConnector(apiUrl, 'wrongAPIKey')
+      return Promise.resolve()
+    })
+
+    after(function () {
+      Primotexto = null
+      return Promise.resolve()
+    })
+
+    it('should fail with a returned 401 error code', function (done) {
+      let doneCount = 0
+      const doneCb = function () {
+        doneCount++
+        if (doneCount >= 2) done()
+      }
+
+      const smsData = {
+        number: receiver,
+        message: 'Hello, from the StrongLoop Primotexto Connector!'
+      }
+
+      fakeServer.onSendNotificationSms = function (headers, body, cb) {
+        cb(401, {})
+        doneCb()
+      }
+
+      Primotexto.send(smsData)
+        .catch(function (error) {
+          error.statusCode.should.be.eql(401)
+          doneCb()
         })
     })
   })
