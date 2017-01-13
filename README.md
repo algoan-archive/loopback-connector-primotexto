@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/yelloan/loopback-connector-primotexto.svg?branch=master)](https://travis-ci.org/yelloan/loopback-connector-primotexto)
+
 # loopback-connector-primotexto
 
 ## Introduction 
