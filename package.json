@@ -4,9 +4,9 @@
   "description": "LoopBack connector for Primotexto",
   "main": "index.js",
   "scripts": {
-    "pretest": "./node_modules/.bin/check-dependencies && ./node_modules/.bin/eslint .",
-    "cover": "./node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -R spec test/",
-    "test": "./node_modules/.bin/mocha -R spec test/"
+    "pretest": "check-dependencies && ./node_modules/.bin/eslint .",
+    "cover": "istanbul cover node_modules/.bin/_mocha -- -R spec test/",
+    "test": "mocha -R spec test/"
   },
   "author": "Yelloan - Fabrice Ongenae",
   "homepage": "https://github.com/yelloan/loopback-connector-primotexto",
@@ -47,6 +47,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yelloan/loopback-connector-primotexto"
+    "url": "git+https://github.com/yelloan/loopback-connector-primotexto.git"
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
   }
 }

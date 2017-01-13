@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/yelloan/loopback-connector-primotexto.svg?branch=master)](https://travis-ci.org/yelloan/loopback-connector-primotexto)
+[![Build Status](https://travis-ci.org/yelloan/loopback-connector-primotexto.svg?branch=master)](https://travis-ci.org/yelloan/loopback-connector-primotexto) [![Coverage Status](https://coveralls.io/repos/github/yelloan/loopback-connector-primotexto/badge.svg?branch=master)](https://coveralls.io/github/yelloan/loopback-connector-primotexto?branch=master) 
 
 # loopback-connector-primotexto
 
