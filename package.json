@@ -1,6 +1,6 @@
 {
   "name": "loopback-connector-primotexto",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "LoopBack connector for Primotexto",
   "main": "index.js",
   "scripts": {
